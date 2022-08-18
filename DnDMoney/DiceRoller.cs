@@ -117,7 +117,7 @@ namespace DnDMoney
 
         public override string ToString()
         {
-            return ("{0} Random numbers between 1 and 20");
+            return ($"{0} Random numbers between 1 and 20");
         }
     }
 }

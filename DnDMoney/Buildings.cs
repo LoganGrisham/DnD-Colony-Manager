@@ -21,8 +21,8 @@ namespace DnDMoney
 
 
         /**
-        * 
-        * 
+        * Docks, Water Building.
+        * This function calculates income and merchants for the docks.
         */
         public void docksWater()
         {
@@ -70,8 +70,8 @@ namespace DnDMoney
         }
 
         /**
-        * 
-        * 
+        * Market Stalls Building
+        * This function calculates markets stall income.
         */
         public void MarketStalls()
         {
@@ -103,13 +103,14 @@ namespace DnDMoney
        
 
         /**
-        * 
-        * 
+        * Tavern Building
+        * This calculates Keg and room income, as well as rumors.
         */
         public void Tavern()
         {
             //1d4-1 rumors every 7 days
             //2d10 kegs times 10 gp
+               //Kegs could be 5gp with unskilled staffers
             //Room income 10gp * 1d10 every 30 days
 
             var rand = new Random();
@@ -177,8 +178,8 @@ namespace DnDMoney
         }
 
         /**
-        * 
-        * 
+        * Bank Building 
+        * This calculates intrest on stored income.
         */
         /*public void bank()
         {
