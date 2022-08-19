@@ -46,6 +46,17 @@ namespace DnDMoney
         {
             return (" Random numbers between 1 and " + num);
         }
+
+        public void diceMenu()
+        {
+            Console.WriteLine("Please Select a dice to roll: ");
+            Console.WriteLine("1. - D100 ");
+            Console.WriteLine("2. - D20 ");
+            Console.WriteLine("3. - D12 ");
+            Console.WriteLine("4. - D10 ");
+            Console.WriteLine("5. - D6 ");
+            Console.WriteLine("6. - D4 ");
+        }
         
     }
 }

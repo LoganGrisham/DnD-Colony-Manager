@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DnDMoney
 {
-    public class DiceRoller
+    public class Dice
     {
-        public int[] results = new int[2];
+        public int[] results = new int[100];
 
         public int[] rollD100(int numRolls)
         {
@@ -86,8 +86,6 @@ namespace DnDMoney
 
         }
 
-
-
         public int[] rollD20UserInput()
         {
             int userInput;
@@ -101,5 +99,6 @@ namespace DnDMoney
             return results;
         }
 
-}
+        
     }
+}

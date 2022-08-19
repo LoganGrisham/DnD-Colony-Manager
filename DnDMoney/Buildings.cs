@@ -11,13 +11,13 @@ namespace DnDMoney
         public int[] results = new int[2];
         public int diceRolls;
         public Merchants merchants;
-        public DiceRoller d;
+        public Dice d;
         public Formatting f;
 
         public Buildings()
         {
             this.merchants = new Merchants("Deafualt");
-            this.d = new DiceRoller();
+            this.d = new Dice();
             this.f = new Formatting();
         }
 
@@ -39,7 +39,7 @@ namespace DnDMoney
             results = d.rollD10(diceRolls);
             Console.WriteLine(" " + diceRolls + f.rollAmount(10));
 
-            for (int i =0; i<results.Length; i++)
+            for (int i =0; i< diceRolls; i++)
             {
                 if (results[i] == 0)
                 {
@@ -93,7 +93,7 @@ namespace DnDMoney
 
             results = d.rollD6(diceRolls);
             Console.WriteLine(" " + diceRolls + f.rollAmount(6));
-            for (int i = 0; i < results.Length; i++)
+            for (int i = 0; i < diceRolls; i++)
             {
                 if (results[i] == 0)
                 {
@@ -132,7 +132,7 @@ namespace DnDMoney
             //Kegs
             results = d.rollD10(diceRolls);
             Console.WriteLine(" " + diceRolls + f.rollAmount(10));
-            for (int i = 0; i < results.Length; i++)
+            for (int i = 0; i < diceRolls; i++)
             {
                 if (results[i] == 0)
                 {

@@ -10,7 +10,8 @@ namespace DnDMoney
             int choice = 0;
             Buildings buildings = new Buildings();
             Formatting f = new Formatting();
-            Utility shouldI = new Utility();
+            Utility u = new Utility();
+            Dice d = new Dice();
 
             while (choice != 4)
             {
@@ -29,25 +30,23 @@ namespace DnDMoney
                 if (choice < 1 || choice > 4)
                 {
                     Console.WriteLine("Wrong Choice! Try again.");
-
                 }
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("Which building would you like to run?");
+                        Console.WriteLine("Which building would you like to calculate?");
                         break;
                     case 2:
-                        Console.WriteLine("What dice would you like to roll?");
+                        u.diceRollTool();                       
                         break;
                     case 3:
-                        shouldI.Kms();
+                        u.Kms();
                         break;
                     case 4:
                         Console.WriteLine("Exiting program...");
                         break;
 
                 }
-
 
 
 
