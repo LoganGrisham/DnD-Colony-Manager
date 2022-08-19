@@ -50,7 +50,7 @@ namespace DnDMoney
 
 
 
-                f.docksWaterHeaderText();
+                /*f.docksWaterHeaderText();
                 buildings.docksWater();
 
                 f.spacerLines();
@@ -64,11 +64,13 @@ namespace DnDMoney
                 buildings.Tavern();
 
                 f.spacerLines();
+                */
 
-
-
-                Console.ReadKey();
+                
+                
             }
+            Console.WriteLine("Press nay ket to continue");
+            Console.ReadKey();
         }
         
     }

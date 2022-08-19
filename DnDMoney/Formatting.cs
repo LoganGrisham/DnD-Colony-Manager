@@ -57,6 +57,8 @@ namespace DnDMoney
             Console.WriteLine("5. - D6 ");
             Console.WriteLine("6. - D4 ");
         }
+
+       
         
     }
 }
