@@ -10,8 +10,6 @@ namespace DnDMoney
     {
         public void Kms()
         {
-            int go = 1;
-            string ui = "nbasdjkh";
             Random r = new Random();
 
             int kms = r.Next(2);

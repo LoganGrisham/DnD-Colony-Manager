@@ -12,11 +12,13 @@ namespace DnDMoney
         public int diceRolls;
         public Merchants merchants;
         public DiceRoller d;
+        public Formatting f;
 
         public Buildings()
         {
             this.merchants = new Merchants("Deafualt");
             this.d = new DiceRoller();
+            this.f = new Formatting();
         }
 
 
@@ -35,6 +37,7 @@ namespace DnDMoney
             diceRolls = 2;
 
             results = d.rollD10(diceRolls);
+            Console.WriteLine(" " + diceRolls + f.rollAmount(10));
 
             for (int i =0; i<results.Length; i++)
             {
@@ -49,15 +52,20 @@ namespace DnDMoney
             }
 
             Console.WriteLine("---Merchant---");
+
             results = d.rollD100(1);
             int holder = results[0];
+            Console.WriteLine(" " + 1 + f.rollAmount(100));
 
+            results = null;
             results = d.rollD12(1);
             int holder2 = results[0];
+            Console.WriteLine(" " + 1 + f.rollAmount(12));
 
+            results = null;
             results = d.rollD12(1);
             int holderLeg = results[0];
-
+            Console.WriteLine(" " + 1 + f.rollAmount(12));
 
             merchants.merchantsRoll(holder, holderLeg);
             merchants.QualityRoll(holder2);
@@ -84,6 +92,7 @@ namespace DnDMoney
             diceRolls = 2;
 
             results = d.rollD6(diceRolls);
+            Console.WriteLine(" " + diceRolls + f.rollAmount(6));
             for (int i = 0; i < results.Length; i++)
             {
                 if (results[i] == 0)
@@ -112,7 +121,7 @@ namespace DnDMoney
             //2d10 kegs times 10 gp
                //Kegs could be 5gp with unskilled staffers
             //Room income 10gp * 1d10 every 30 days
-
+            
             var rand = new Random();
             int totalKegs = 0;
             int totalRooms = 0;
@@ -122,6 +131,7 @@ namespace DnDMoney
 
             //Kegs
             results = d.rollD10(diceRolls);
+            Console.WriteLine(" " + diceRolls + f.rollAmount(10));
             for (int i = 0; i < results.Length; i++)
             {
                 if (results[i] == 0)
@@ -137,6 +147,7 @@ namespace DnDMoney
             //Rooms
             diceRolls = 1;
             results = d.rollD10(diceRolls);
+            Console.WriteLine(" " + diceRolls + f.rollAmount(10));
             for (int i = 0; i < 1; i++)
             {
                 if (results[i] == 0)
@@ -151,7 +162,8 @@ namespace DnDMoney
 
             //Rumors
             diceRolls = 1;
-            results = d.rollD10(diceRolls);
+            results = d.rollD4(diceRolls);
+            Console.WriteLine(" " + diceRolls + f.rollAmount(4));
             for (int i = 0; i < 1; i++)
             {
                 if (results[i] == 0)
@@ -173,8 +185,10 @@ namespace DnDMoney
 
             Console.WriteLine("  -- Roll Total Rumors: " + totalRumors);
             Console.WriteLine("  -- Tavern Rumors Total: " + ((totalRumors)-1));
-            
+
             // TOTAL OVERALL
+            Console.WriteLine("\n  -- Tavern Total Income: " + ((totalKegs * 10)+ (totalRooms * 10)));
+            Console.WriteLine("  -- Tavern Total Rumors: " + ((totalRumors) - 1));
         }
 
         /**

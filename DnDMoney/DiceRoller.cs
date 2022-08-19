@@ -15,8 +15,6 @@ namespace DnDMoney
             int res;
             var rand = new Random();
 
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 100");
-
             for (int i = 0; i < numRolls; i++)
             {
                 res = rand.Next(101);
@@ -30,8 +28,6 @@ namespace DnDMoney
             int res;
             var rand = new Random();
 
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 20");
-
             for (int i = 0; i < numRolls; i++)
             {
                 res = rand.Next(21);
@@ -44,8 +40,6 @@ namespace DnDMoney
             int res;
             var rand = new Random();
 
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 12");
-
             for (int i = 0; i < numRolls; i++)
             {
                 res = rand.Next(13);
@@ -57,8 +51,6 @@ namespace DnDMoney
         {
             int res;
             var rand = new Random();
-
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 10");
 
             for (int i = 0; i < numRolls; i++)
             {
@@ -73,8 +65,6 @@ namespace DnDMoney
             int res;
             var rand = new Random();
 
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 6");
-
             for (int i = 0; i < numRolls; i++)
             {
                 res = rand.Next(7);
@@ -86,8 +76,6 @@ namespace DnDMoney
         {
             int res;
             var rand = new Random();
-
-            Console.WriteLine(" " + numRolls + " Random numbers between 1 and 4");
 
             for (int i = 0; i < numRolls; i++)
             {
@@ -106,8 +94,6 @@ namespace DnDMoney
             var rand = new Random();
             userInput = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(userInput + " Random numbers between 1 and 20");
-
             for (int i = 0; i < userInput; i++)
             {
                 Console.WriteLine("{0,8:N0}", rand.Next(21));
@@ -115,9 +101,5 @@ namespace DnDMoney
             return results;
         }
 
-        public override string ToString()
-        {
-            return ($"{0} Random numbers between 1 and 20");
-        }
-    }
 }
+    }

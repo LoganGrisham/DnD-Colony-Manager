@@ -42,5 +42,10 @@ namespace DnDMoney
             Console.WriteLine(" ::Rumors - 1d4-1 (7 days)      :: \n");
         }
         
+        public string rollAmount(int num)
+        {
+            return (" Random numbers between 1 and " + num);
+        }
+        
     }
 }
