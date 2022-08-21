@@ -125,11 +125,11 @@ namespace DnDMoney
         }
         public void saveBankInfo(BankAccount bank)
         {
-            FileTools.WriteToBinaryFile<BankAccount>(@"C:\DND.txt", bank);
+            FileTools.WriteToBinaryFile<BankAccount>(@"F:\DND\bankAccount.txt", bank);
         }
         public void loadBankInfo(BankAccount bank)
         {
-            bank = FileTools.ReadFromBinaryFile<BankAccount>(@"C:\DND.txt");
+            bank = FileTools.ReadFromBinaryFile<BankAccount>(@"F:\DND\bankAccount.txt");
         }
 
         public void Kms()
