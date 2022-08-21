@@ -85,11 +85,11 @@ namespace DnDMoney
         {
             int choice = 0;
 
-            while (choice !=5) {
+            while (choice !=6) {
                 Console.WriteLine("What building would you like to calculate?");
                 f.buildingMenu();
                 choice = Convert.ToInt32(Console.ReadLine());
-                if (choice < 1 || choice > 4)
+                if (choice < 1 || choice > 6)
                 {
                     Console.WriteLine("Wrong Choice! Try again.");
                 }
@@ -108,6 +108,12 @@ namespace DnDMoney
                             //b.bank();
                         break;
                     case 5:
+                        b.docksWater();
+                        b.MarketStalls();
+                        b.Tavern();
+                        //b.bank();
+                        break;
+                    case 6:
                         break;
                 }
             }

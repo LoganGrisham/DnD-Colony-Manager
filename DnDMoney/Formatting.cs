@@ -55,7 +55,7 @@ namespace DnDMoney
             Console.WriteLine("3. - D12 ");
             Console.WriteLine("4. - D10 ");
             Console.WriteLine("5. - D6 ");
-            Console.WriteLine("6. - D4 ");
+            Console.WriteLine("6. - D4 \n");
         }
 
         public void buildingMenu()
@@ -65,7 +65,8 @@ namespace DnDMoney
             Console.WriteLine("2. Market Stalls");
             Console.WriteLine("3. Tavern");
             Console.WriteLine("4. Bank");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. --ALL CURRENT STRUCTURES--");
+            Console.WriteLine("6. Exit \n");
         }
         
     }

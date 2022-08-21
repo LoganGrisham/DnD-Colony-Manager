@@ -23,7 +23,7 @@ namespace DnDMoney
                 Console.WriteLine("3. Determine your fate");
                 Console.WriteLine("4. Clear Screen");
                 Console.WriteLine("5. Quit");
-                Console.WriteLine("Choose an option from 1 to 4:");
+                Console.WriteLine("Choose an option from 1 to 5:");
                 Console.WriteLine(" ");
 
                 choice = Convert.ToInt32(Console.ReadLine());
