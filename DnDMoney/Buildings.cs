@@ -208,23 +208,55 @@ namespace DnDMoney
             double money = 0;
             double result = 0;
 
-            f.bankMenuMoney();
+            f.BankMenu();
             response = Convert.ToInt32(Console.ReadLine());
-
             if(response == 1)
             {
-                Console.WriteLine("Please enter the amount of money in your bank.");
-                money = Convert.ToInt32(Console.ReadLine());
-
-                result = money + (money * 0.05);
-                Console.WriteLine("Old amount: {0:C2}", money);
-                Console.WriteLine("New amount: {0:C2}", result);
+                //account
+                f.bankMenuAccount();
+                response = Convert.ToInt32(Console.ReadLine());
+                switch (response)
+                {
+                    case 1: //see account
+                        Console.WriteLine("Current Account information: \n" + 
+                            bankAccount.ToString());
+                        break;
+                    case 2: //change bal
+                        break;
+                    case 3: //change name
+                        break;
+                }
             }
             else
             {
-                u.loadBankInfo(bankAccount);
-                Console.WriteLine(bankAccount.balance);
+                f.bankMenuMoney();
+                response = Convert.ToInt32(Console.ReadLine());
+
+                if (response == 1)
+                {
+                    Console.WriteLine("Please enter the amount of money in your bank.");
+                    money = Convert.ToInt32(Console.ReadLine());
+
+                    result = money + (money * 0.05);
+                    Console.WriteLine("Old amount: {0:C2}", money);
+                    Console.WriteLine("New amount: {0:C2}", result);
+                }
+                else
+                {
+                    u.loadBankInfo(bankAccount);
+                    Console.WriteLine(bankAccount.balance);
+                }
             }
+
+           
+
+            //GET MENUS IN THE RIGHT ORDER
+            //ALLOW USERS TO CHANGE ACCOUNT DATA
+            //STORE ACCOUNTS IN BACKACCOUNT LIST
+            //RETRIEVE BY ID ?
+            //SET SERIALIZED DATA TO CURRENT BANK ACCOUNT
+            
+          
 
             f.bankSaveDataMenu();
             response = Convert.ToInt32(Console.ReadLine());

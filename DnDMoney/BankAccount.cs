@@ -26,5 +26,12 @@ namespace DnDMoney
             this.balance = bal;
         }
 
+        public override string ToString()
+        {
+            return "Account ID: " + accountId + " \nParty Name: " + 
+                partyName + "\nBalance: " + balance;
+
+        }
+
     }
 }

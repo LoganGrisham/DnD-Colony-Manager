@@ -66,7 +66,7 @@ namespace DnDMoney
             Console.WriteLine("3. Tavern");
             Console.WriteLine("4. Bank");
             Console.WriteLine("5. --ALL CURRENT STRUCTURES--");
-            Console.WriteLine("6. Exit \n");
+            Console.WriteLine("6. Exit back to main menu\n");
         }
         public void BankMenu()
         {
@@ -78,8 +78,9 @@ namespace DnDMoney
         public void bankMenuAccount()
         {
             Console.WriteLine("What would you like to change?");
-            Console.WriteLine("1 - See account informatiojn");
-            Console.WriteLine("2 - Access Money");
+            Console.WriteLine("1 - See account information");
+            Console.WriteLine("2 - Change balance");
+            Console.WriteLine("3 - Change name");
         }
         public void bankMenuMoney()
         {
