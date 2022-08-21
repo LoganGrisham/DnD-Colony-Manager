@@ -73,6 +73,7 @@ namespace DnDMoney
             Console.WriteLine("What would you like to Access?");
             Console.WriteLine("1 - Access Account Information");
             Console.WriteLine("2 - Access Money");
+            Console.WriteLine("3 - Create Account");
 
         }
         public void bankMenuAccount()
@@ -95,5 +96,6 @@ namespace DnDMoney
             Console.WriteLine("1 - Yes");
             Console.WriteLine("2 - No");
         }
+        
     }
 }

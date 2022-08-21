@@ -207,6 +207,10 @@ namespace DnDMoney
             int response = 0;
             double money = 0;
             double result = 0;
+            string createUName;
+            string createUBal;
+            string newName;
+            double newBal = 0;
 
             f.BankMenu();
             response = Convert.ToInt32(Console.ReadLine());
@@ -222,12 +226,22 @@ namespace DnDMoney
                             bankAccount.ToString());
                         break;
                     case 2: //change bal
+                        Console.WriteLine("Current Balance: " + bankAccount.balance);
+                        Console.WriteLine("Please enter the new balance: ");
+                        newBal = Convert.ToDouble(Console.ReadLine());
+                        bankAccount.balance = newBal;
+                        Console.WriteLine("New Balance is: " + bankAccount.balance);
                         break;
                     case 3: //change name
+                        Console.WriteLine("Current Name: " + bankAccount.partyName);
+                        Console.WriteLine("Please enter the new Account Name: ");
+                        newName = Console.ReadLine();
+                        bankAccount.partyName = newName;
+                        Console.WriteLine("New name is: " + bankAccount.partyName);
                         break;
                 }
             }
-            else
+            else if (response == 2)
             {
                 f.bankMenuMoney();
                 response = Convert.ToInt32(Console.ReadLine());
@@ -247,11 +261,20 @@ namespace DnDMoney
                     Console.WriteLine(bankAccount.balance);
                 }
             }
+            else
+            {
+                Console.WriteLine("Please Enter an account name: ");
+                createUName = Console.ReadLine();
+                bankAccount.partyName = createUName;
+                Console.WriteLine("Please Enter an account balance");
+                newBal = Convert.ToDouble(Console.ReadLine());
+                bankAccount.balance = newBal;
+                Console.WriteLine("New name is: " + bankAccount.partyName);
+                Console.WriteLine("New Balance is: " + bankAccount.balance);
+
+            }
 
            
-
-            //GET MENUS IN THE RIGHT ORDER
-            //ALLOW USERS TO CHANGE ACCOUNT DATA
             //STORE ACCOUNTS IN BACKACCOUNT LIST
             //RETRIEVE BY ID ?
             //SET SERIALIZED DATA TO CURRENT BANK ACCOUNT
@@ -304,7 +327,7 @@ namespace DnDMoney
                         docksWater();
                         MarketStalls();
                         Tavern();
-                        bank();
+                        //bank();
                         Console.WriteLine("");
                         break;
                     case 6:
