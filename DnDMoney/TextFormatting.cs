@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnDMoney
 {
-    public class Formatting
+    public class TextFormatting
     {
 
         public void introText()

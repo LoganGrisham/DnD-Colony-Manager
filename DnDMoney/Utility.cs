@@ -8,7 +8,7 @@ namespace DnDMoney
 {
     public class Utility
     {
-        Formatting f = new Formatting();
+        TextFormatting f = new TextFormatting();
         Dice d = new Dice();
         Buildings b = new Buildings();
 

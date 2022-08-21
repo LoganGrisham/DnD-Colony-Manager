@@ -12,13 +12,15 @@ namespace DnDMoney
         public int diceRolls;
         public Merchants merchants;
         public Dice d;
-        public Formatting f;
+        public TextFormatting f;
+
+        
 
         public Buildings()
         {
             this.merchants = new Merchants("Deafualt");
             this.d = new Dice();
-            this.f = new Formatting();
+            this.f = new TextFormatting();
         }
 
 

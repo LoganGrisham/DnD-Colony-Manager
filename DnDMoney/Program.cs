@@ -9,7 +9,7 @@ namespace DnDMoney
         {
             int choice = 0;
             Buildings buildings = new Buildings();
-            Formatting f = new Formatting();
+            TextFormatting f = new TextFormatting();
             Utility u = new Utility();
             Dice d = new Dice();
 
