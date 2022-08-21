@@ -50,26 +50,6 @@ namespace DnDMoney
                         break;
 
                 }
-
-
-
-                /*f.docksWaterHeaderText();
-                buildings.docksWater();
-
-                f.spacerLines();
-
-                f.marketStallsHeaderText();
-                buildings.MarketStalls();
-
-                f.spacerLines();
-
-                f.tavernHeaderText();
-                buildings.Tavern();
-
-                f.spacerLines();
-                */
-
-                
                 
             }
             Console.WriteLine("Press any key to continue");

@@ -195,16 +195,22 @@ namespace DnDMoney
         * Bank Building 
         * This calculates intrest on stored income.
         */
-        /*public void bank()
+        public void bank()
         {
+            //Add serialization for file to store money
 
             //stored money * 5%
             double money = 0;
             double result = 0;
 
+            Console.WriteLine("Please enter the amount of money in your bank.");
             money = Convert.ToInt32(Console.ReadLine());
 
-        }*/
+            result = money + (money * 0.05);
+            Console.WriteLine("Old amount: {0:C2}", money);
+            Console.WriteLine("New amount: {0:C2}", result);
+
+        }
         
     }
 }   

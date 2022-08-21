@@ -97,21 +97,26 @@ namespace DnDMoney
                 {
                     case 1: // docks water
                         b.docksWater();
+                        Console.WriteLine("");
                         break;
                     case 2: //market stalls
                         b.MarketStalls();
+                        Console.WriteLine("");
                         break;
                     case 3: //tavern
                         b.MarketStalls();
+                        Console.WriteLine("");
                         break;
                     case 4: //bank
-                            //b.bank();
+                        b.bank();
+                        Console.WriteLine("");
                         break;
                     case 5:
                         b.docksWater();
                         b.MarketStalls();
                         b.Tavern();
-                        //b.bank();
+                        b.bank();
+                        Console.WriteLine("");
                         break;
                     case 6:
                         break;
