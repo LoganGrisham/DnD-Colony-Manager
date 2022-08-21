@@ -65,6 +65,7 @@ namespace DnDMoney
             Console.WriteLine("2. Market Stalls");
             Console.WriteLine("3. Tavern");
             Console.WriteLine("4. Bank");
+            Console.WriteLine("5. Exit");
         }
         
     }

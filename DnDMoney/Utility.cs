@@ -10,6 +10,7 @@ namespace DnDMoney
     {
         Formatting f = new Formatting();
         Dice d = new Dice();
+        Buildings b = new Buildings();
 
         public void diceRollTool()
         {
@@ -82,7 +83,34 @@ namespace DnDMoney
 
         public void buildingTool()
         {
+            int choice = 0;
 
+            while (choice !=5) {
+                Console.WriteLine("What building would you like to calculate?");
+                f.buildingMenu();
+                choice = Convert.ToInt32(Console.ReadLine());
+                if (choice < 1 || choice > 4)
+                {
+                    Console.WriteLine("Wrong Choice! Try again.");
+                }
+                switch (choice)
+                {
+                    case 1: // docks water
+                        b.docksWater();
+                        break;
+                    case 2: //market stalls
+                        b.MarketStalls();
+                        break;
+                    case 3: //tavern
+                        b.MarketStalls();
+                        break;
+                    case 4: //bank
+                            //b.bank();
+                        break;
+                    case 5:
+                        break;
+                }
+            }
         }
 
         public void Kms()
