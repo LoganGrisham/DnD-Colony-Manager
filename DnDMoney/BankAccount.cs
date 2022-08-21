@@ -10,27 +10,27 @@ namespace DnDMoney
     public class BankAccount
     {
         public int accountId { get; set; }
-        public string partyName { get; set; }
         public double balance { get; set; }
+        public string partyName { get; set; }
+      
         public List<BankAccount> bankAccountsList = new List<BankAccount>();
 
         public BankAccount()
         {
             accountId = 0;
-            partyName = "Empty";
             balance = 0;
+            partyName = "Empty";
         }
-        public BankAccount(int accountID, string pName, double bal, List<BankAccount> bList)
+        public BankAccount(int accountID, double bal, string pName)
         {
             this.accountId = accountID;
             this.partyName = pName;
             this.balance = bal;
-            this.bankAccountsList = bList;
         }
 
-        public void addBankAccount()
+        public void addBankAccount(int id, double bal, string name)
         {
-           // bankAccountsList.Add();
+            bankAccountsList.Add(new BankAccount(id, bal, name));
         }
 
         public override string ToString()

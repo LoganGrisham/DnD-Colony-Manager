@@ -272,6 +272,8 @@ namespace DnDMoney
                 Console.WriteLine("New name is: " + bankAccount.partyName);
                 Console.WriteLine("New Balance is: " + bankAccount.balance);
 
+                bankAccount.addBankAccount(bankAccount.accountId, bankAccount.balance, bankAccount.partyName);
+
             }
 
            
