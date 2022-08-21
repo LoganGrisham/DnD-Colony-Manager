@@ -13,5 +13,13 @@ namespace DnDMoney
         public string partyName { get; set; }
         public double balance { get; set; }
 
+        public BankAccount()
+        {
+            accountId = 0;
+            partyName = "Empty";
+            balance = 0;
+        }
+       
+
     }
 }

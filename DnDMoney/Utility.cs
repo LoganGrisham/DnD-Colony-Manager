@@ -123,6 +123,14 @@ namespace DnDMoney
                 }
             }
         }
+        public void saveBankInfo(BankAccount bank)
+        {
+            FileTools.WriteToBinaryFile<BankAccount>(@"C:\DND.txt", bank);
+        }
+        public void loadBankInfo(BankAccount bank)
+        {
+            bank = FileTools.ReadFromBinaryFile<BankAccount>(@"C:\DND.txt");
+        }
 
         public void Kms()
         {
