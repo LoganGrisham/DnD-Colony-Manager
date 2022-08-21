@@ -271,17 +271,16 @@ namespace DnDMoney
                 bankAccount.balance = newBal;
                 Console.WriteLine("New name is: " + bankAccount.partyName);
                 Console.WriteLine("New Balance is: " + bankAccount.balance);
-
+                var rand = new Random();
+                bankAccount.accountId = rand.Next(10000);
                 bankAccount.addBankAccount(bankAccount.accountId, bankAccount.balance, bankAccount.partyName);
-
+                bankAccount.printAccountList();
             }
-
-           
-            //STORE ACCOUNTS IN BACKACCOUNT LIST
+            
             //RETRIEVE BY ID ?
             //SET SERIALIZED DATA TO CURRENT BANK ACCOUNT
-            
-          
+
+
 
             f.bankSaveDataMenu();
             response = Convert.ToInt32(Console.ReadLine());
@@ -324,6 +323,7 @@ namespace DnDMoney
                     case 4: //bank
                         bank();
                         Console.WriteLine("");
+                        
                         break;
                     case 5:
                         docksWater();

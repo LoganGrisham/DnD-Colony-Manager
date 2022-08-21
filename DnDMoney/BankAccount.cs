@@ -33,6 +33,15 @@ namespace DnDMoney
             bankAccountsList.Add(new BankAccount(id, bal, name));
         }
 
+        public void printAccountList()
+        {
+            foreach(var acc in bankAccountsList)
+            {
+                Console.WriteLine("Account ID: " + acc.accountId + " \nParty Name: " +
+                acc.partyName + "\nBalance: " + acc.balance);
+            }
+        }
+
         public override string ToString()
         {
             return "Account ID: " + accountId + " \nParty Name: " + 
