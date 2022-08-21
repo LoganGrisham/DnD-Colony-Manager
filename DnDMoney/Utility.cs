@@ -80,6 +80,11 @@ namespace DnDMoney
             }
         }
 
+        public void buildingTool()
+        {
+
+        }
+
         public void Kms()
         {
             Random r = new Random();

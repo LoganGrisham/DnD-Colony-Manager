@@ -58,7 +58,14 @@ namespace DnDMoney
             Console.WriteLine("6. - D4 ");
         }
 
-       
+        public void buildingMenu()
+        {
+            Console.WriteLine("Please Select a building: ");
+            Console.WriteLine("1. Docks - Water");
+            Console.WriteLine("2. Market Stalls");
+            Console.WriteLine("3. Tavern");
+            Console.WriteLine("4. Bank");
+        }
         
     }
 }
