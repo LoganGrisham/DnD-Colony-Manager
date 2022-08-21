@@ -34,7 +34,7 @@ namespace DnDMoney
                 switch (choice)
                 {
                     case 1:
-                        u.buildingTool();
+                        buildings.buildingTool();
                         break;
                     case 2:
                         u.diceRollTool();

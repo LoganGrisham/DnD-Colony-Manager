@@ -11,7 +11,7 @@ namespace DnDMoney
     public class FileTools
     {
 
-        public static void WriteToBinaryFile<T>(string filePath, T objectToWrite, bool append = false)
+        /*public static void WriteToBinaryFile<T>(string filePath, T objectToWrite, bool append = false)
         {
             using (Stream stream = File.Open(filePath, append ? FileMode.Append : FileMode.Create))
             {
@@ -26,6 +26,7 @@ namespace DnDMoney
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 return (T)binaryFormatter.Deserialize(stream);
             }
-        }
+        }*/
+
     }
 }

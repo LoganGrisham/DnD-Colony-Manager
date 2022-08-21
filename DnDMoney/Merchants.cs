@@ -9,7 +9,6 @@ namespace DnDMoney
     public class Merchants
     {
         public int diceOutcome, rollsAmount;
-        public Buildings diceRoll;
         string merchantName;
         
         public Merchants(string mName) 

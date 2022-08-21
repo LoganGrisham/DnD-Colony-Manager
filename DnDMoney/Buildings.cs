@@ -13,6 +13,9 @@ namespace DnDMoney
         public Merchants merchants;
         public Dice d;
         public TextFormatting f;
+        public Utility u = new Utility();
+        public BankAccount bankAccount;
+        
 
         
 
@@ -21,6 +24,8 @@ namespace DnDMoney
             this.merchants = new Merchants("Deafualt");
             this.d = new Dice();
             this.f = new TextFormatting();
+            this.bankAccount = new BankAccount();
+            this.u = new Utility();
         }
 
 
@@ -199,20 +204,82 @@ namespace DnDMoney
         */
         public void bank()
         {
-            //Add serialization for file to store money
-
-            //stored money * 5%
+            int response = 0;
             double money = 0;
             double result = 0;
 
-            Console.WriteLine("Please enter the amount of money in your bank.");
-            money = Convert.ToInt32(Console.ReadLine());
+            f.bankMenuMoney();
+            response = Convert.ToInt32(Console.ReadLine());
 
-            result = money + (money * 0.05);
-            Console.WriteLine("Old amount: {0:C2}", money);
-            Console.WriteLine("New amount: {0:C2}", result);
+            if(response == 1)
+            {
+                Console.WriteLine("Please enter the amount of money in your bank.");
+                money = Convert.ToInt32(Console.ReadLine());
 
+                result = money + (money * 0.05);
+                Console.WriteLine("Old amount: {0:C2}", money);
+                Console.WriteLine("New amount: {0:C2}", result);
+            }
+            else
+            {
+                u.loadBankInfo(bankAccount);
+                Console.WriteLine(bankAccount.balance);
+            }
+
+            f.bankSaveDataMenu();
+            response = Convert.ToInt32(Console.ReadLine());
+            if (response == 1)
+            {
+                u.saveBankInfo(bankAccount);
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
         }
-        
+        public void buildingTool()
+        {
+            int choice = 0;
+
+            while (choice != 6)
+            {
+                Console.WriteLine("What building would you like to calculate?");
+                f.buildingMenu();
+                choice = Convert.ToInt32(Console.ReadLine());
+                if (choice < 1 || choice > 6)
+                {
+                    Console.WriteLine("Wrong Choice! Try again.");
+                }
+                switch (choice)
+                {
+                    case 1: // docks water
+                        docksWater();
+                        Console.WriteLine("");
+                        break;
+                    case 2: //market stalls
+                        MarketStalls();
+                        Console.WriteLine("");
+                        break;
+                    case 3: //tavern
+                        MarketStalls();
+                        Console.WriteLine("");
+                        break;
+                    case 4: //bank
+                        bank();
+                        Console.WriteLine("");
+                        break;
+                    case 5:
+                        docksWater();
+                        MarketStalls();
+                        Tavern();
+                        bank();
+                        Console.WriteLine("");
+                        break;
+                    case 6:
+                        break;
+                }
+            }
+        }
     }
+
 }   

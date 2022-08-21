@@ -19,7 +19,12 @@ namespace DnDMoney
             partyName = "Empty";
             balance = 0;
         }
-       
+        public BankAccount(int accountID, string pName, double bal)
+        {
+            this.accountId = accountID;
+            this.partyName = pName;
+            this.balance = bal;
+        }
 
     }
 }

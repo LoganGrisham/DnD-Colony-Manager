@@ -10,7 +10,13 @@ namespace DnDMoney
     {
         TextFormatting f = new TextFormatting();
         Dice d = new Dice();
-        Buildings b = new Buildings();
+        int uID;
+        const string fileName = @"F:\DND\bankAccount.txt";
+
+        public Utility()
+        {
+            this.uID = 0;
+        }
 
         public void diceRollTool()
         {
@@ -81,55 +87,41 @@ namespace DnDMoney
             }
         }
 
-        public void buildingTool()
+        
+        public void saveBankInfo(BankAccount bank)
         {
-            int choice = 0;
-
-            while (choice !=6) {
-                Console.WriteLine("What building would you like to calculate?");
-                f.buildingMenu();
-                choice = Convert.ToInt32(Console.ReadLine());
-                if (choice < 1 || choice > 6)
+            using (var stream = File.Open(fileName, FileMode.Create))
+            {
+                using (var writer = new BinaryWriter(stream, Encoding.UTF8, false))
                 {
-                    Console.WriteLine("Wrong Choice! Try again.");
-                }
-                switch (choice)
-                {
-                    case 1: // docks water
-                        b.docksWater();
-                        Console.WriteLine("");
-                        break;
-                    case 2: //market stalls
-                        b.MarketStalls();
-                        Console.WriteLine("");
-                        break;
-                    case 3: //tavern
-                        b.MarketStalls();
-                        Console.WriteLine("");
-                        break;
-                    case 4: //bank
-                        b.bank();
-                        Console.WriteLine("");
-                        break;
-                    case 5:
-                        b.docksWater();
-                        b.MarketStalls();
-                        b.Tavern();
-                        b.bank();
-                        Console.WriteLine("");
-                        break;
-                    case 6:
-                        break;
+                    writer.Write(bank.accountId);
+                    writer.Write(bank.balance);
+                    writer.Write(bank.partyName);
                 }
             }
         }
-        public void saveBankInfo(BankAccount bank)
-        {
-            FileTools.WriteToBinaryFile<BankAccount>(@"F:\DND\bankAccount.txt", bank);
-        }
         public void loadBankInfo(BankAccount bank)
         {
-            bank = FileTools.ReadFromBinaryFile<BankAccount>(@"F:\DND\bankAccount.txt");
+            int accID;
+            double bal;
+            string pName;
+            if (File.Exists(fileName))
+            {
+                using (var stream = File.Open(fileName, FileMode.Open))
+                {
+                    using (var reader = new BinaryReader(stream, Encoding.UTF8, false))
+                    {
+                        accID = reader.ReadInt32();
+                        bal = reader.ReadDouble();
+                        pName = reader.ReadString();
+                        
+                    }
+                }
+
+                Console.WriteLine("Account ID: " + accID);
+                Console.WriteLine("Account Balance: " + bal);
+                Console.WriteLine("Party Name: " + pName);
+            }
         }
 
         public void Kms()

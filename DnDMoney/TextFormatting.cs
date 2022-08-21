@@ -68,6 +68,31 @@ namespace DnDMoney
             Console.WriteLine("5. --ALL CURRENT STRUCTURES--");
             Console.WriteLine("6. Exit \n");
         }
-        
+        public void BankMenu()
+        {
+            Console.WriteLine("What would you like to Access?");
+            Console.WriteLine("1 - Access Account Information");
+            Console.WriteLine("2 - Access Money");
+
+        }
+        public void bankMenuAccount()
+        {
+            Console.WriteLine("What would you like to change?");
+            Console.WriteLine("1 - See account informatiojn");
+            Console.WriteLine("2 - Access Money");
+        }
+        public void bankMenuMoney()
+        {
+            Console.WriteLine("Would you like to Enter the data manually, or load the saved data?");
+            Console.WriteLine("1 - Manual Entry");
+            Console.WriteLine("2 - Load file");
+        }
+
+        public void bankSaveDataMenu()
+        {
+            Console.WriteLine("Would you like to save this data?");
+            Console.WriteLine("1 - Yes");
+            Console.WriteLine("2 - No");
+        }
     }
 }
